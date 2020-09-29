@@ -31,7 +31,7 @@ switch ($path) {
                 $patente = explode('/', $path)[2];
                 AutoController::Remove($patente);
             } else {
-                echo GenericResponse::obtain(false, 'Unauthorized.');
+                echo ApiResponse::apiResponse(false, 'No esta autorizado, solo Usuario');
             }
         }
         break;
